@@ -2,7 +2,11 @@
 @section('content')
 @include('template.slider')
 
+
+
 <!-- CHOOSE  -->
+
+
       <div class="whyschose">
          <div class="container">
 
@@ -69,48 +73,17 @@
                </div>
             </div>
             <div class="row">
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <div class="service-box">
-                     <i><img src="icon/service1.png"/></i>
-                     <h3>Fast service</h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <div class="service-box">
-                     <i><img src="icon/service2.png"/></i>
-                     <h3>Secure payments</h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <div class="service-box">
-                     <i><img src="icon/service3.png"/></i>
-                     <h3>Expert team</h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <div class="service-box">
-                     <i><img src="icon/service4.png"/></i>
-                     <h3>Affordable services</h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <div class="service-box">
-                     <i><img src="icon/service5.png"/></i>
-                     <h3>90 Days warranty</h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                  </div>
-               </div>
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
-                  <div class="service-box">
-                     <i><img src="icon/service6.png"/></i>
-                     <h3>Award winning</h3>
-                     <p>Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                  </div>
-               </div>
+                 @foreach ($servicios as $servicio)
+                          <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                            <div class="service-box">
+                               <i><img src="{{$servicio->imagen}}"/></i>
+                               <h3>{{$servicio->titulo}}</h3>
+                               <p>{{$servicio->descripcion}}</p>
+                            </div>
+                          </div>
+                  @endforeach
+
+              
             </div>
          </div>
       </div>

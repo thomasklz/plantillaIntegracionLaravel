@@ -12,12 +12,19 @@
                      <div class="limit-box">
                         <nav class="main-menu">
                            <ul class="menu-area-main">
-                              <li class="active"> <a href="{{ url('/') }}">Inicio</a> </li>
+
+                                @foreach ($menus as $menu)
+
+                                     <li> <a href="{{ $menu->ruta }}">{{ $menu->descripcion }}</a> </li>
+                                     
+                                @endforeach
+
+                             <!--  <li class="active"> <a href="{{ url('/') }}">Inicio</a> </li>
                               <li> <a href="{{ url('about') }}">About</a> </li>
                               <li> <a href="{{ url('product') }}">product</a> </li>
                               <li> <a href="{{ url('blog') }}"> Blog</a> </li>
                               <li> <a href="contact.html">Contact</a> </li>
-                              <li class="mean-last"> <a href="#contact">signup</a> </li>
+                              <li class="mean-last"> <a href="#contact">signup</a> </li> -->
                                
                            </ul>
                         </nav>

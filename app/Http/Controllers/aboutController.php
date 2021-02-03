@@ -3,18 +3,22 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Menu;
 class aboutController extends Controller
 {
   
 	public function aboutpage(){
-		return view('about');
+	    $menus=Menu::all();
+		return view('about', compact('menus'));
 	}
 
 	public function productpage(){
 		return view('productos');
 	}
 	public function blogs(){
-		return view('blog');
+
+	   $menus=Menu::all();
+       return view('blog', compact('menus'));
+
 	}
 }
